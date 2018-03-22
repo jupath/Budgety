@@ -1,9 +1,9 @@
 import React from 'react';
 
 const Footer = () => (
-  <div>
+  <footer className="text-center py-4">
     Footer
-  </div>
+  </footer>
 );
 
 export default Footer;

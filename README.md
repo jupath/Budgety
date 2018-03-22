@@ -1,1 +1,1 @@
-## Just another budget app built with React, Redux and Firebase
+## Budgety - Just another budget app built with React, Redux and Firebase
