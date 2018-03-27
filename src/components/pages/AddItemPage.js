@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
-import { addItem } from '../../actions/budget';
+import { startAddItem } from '../../actions/budget';
 import AddItemForm from '../forms/AddItemForm';
 
 class AddItemPage extends Component {
@@ -50,7 +50,7 @@ const mapStateToProps = (state, props) => ({
 });
 
 const mapDispatchToProps = dispatch => ({
-  addItem: item => dispatch(addItem(item)),
+  addItem: item => dispatch(startAddItem(item)),
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(AddItemPage);

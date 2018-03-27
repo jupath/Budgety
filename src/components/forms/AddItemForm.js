@@ -3,7 +3,6 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { SingleDatePicker } from 'react-dates';
 import moment from 'moment';
-import uuid from 'uuid';
 
 class AddItemForm extends Component {
   state = {
@@ -11,7 +10,7 @@ class AddItemForm extends Component {
     itemType: this.props.item.itemType || this.props.itemType,
     description: this.props.item.description || '',
     amount: this.props.item.amount || '',
-    date: this.props.item.date || moment(),
+    date: moment(this.props.item.date) || moment(),
     note: this.props.item.note || '',
     focused: false,
   };
@@ -53,9 +52,8 @@ class AddItemForm extends Component {
         itemType: this.state.itemType,
         description: this.state.description,
         amount: parseFloat(this.state.amount),
-        date: this.state.date,
+        date: this.state.date.valueOf(),
         note: this.state.note,
-        id: uuid(),
       });
     }
   }

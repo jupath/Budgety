@@ -7,7 +7,7 @@ import Total from './Total';
 
 const BudgetSummary = (props) => {
   const { totalIncomes, totalExpenses } = props;
-  const total = (totalIncomes - totalExpenses).toFixed(2);
+  const total = totalIncomes - totalExpenses;
   return (
     <div>
       <div className="container">

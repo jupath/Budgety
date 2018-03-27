@@ -8,8 +8,9 @@ const Total = (props) => {
   const { numOfIncomes, numOfExpenses, total } = props;
   const incomeWord = numOfIncomes === 1 ? 'income' : 'incomes';
   const expenseWord = numOfExpenses === 1 ? 'expense' : 'expenses';
+  const totalFixed = total.toFixed(2);
   const formedTotal = (<NumberFormat
-    value={total}
+    value={totalFixed}
     displayType="text"
     thousandSeparator
     prefix="$"

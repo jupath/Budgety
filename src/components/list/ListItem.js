@@ -22,7 +22,7 @@ ListItem.propTypes = {
     itemType: PropTypes.string,
     description: PropTypes.string,
     amount: PropTypes.number,
-    date: PropTypes.object,
+    date: PropTypes.number,
     note: PropTypes.string,
     id: PropTypes.string,
   }).isRequired,

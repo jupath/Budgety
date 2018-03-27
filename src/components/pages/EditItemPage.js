@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
-import { updateItem, deleteItem } from '../../actions/budget';
+import { startUpdateItem, startDeleteItem } from '../../actions/budget';
 import AddItemForm from '../forms/AddItemForm';
 
 class EditItemPage extends Component {
@@ -38,8 +38,8 @@ const mapStateToProps = (state, props) => ({
 });
 
 const mapDispatchToState = dispatch => ({
-  updateItem: (id, item) => dispatch(updateItem(id, item)),
-  deleteItem: id => dispatch(deleteItem(id)),
+  updateItem: (id, item) => dispatch(startUpdateItem(id, item)),
+  deleteItem: id => dispatch(startDeleteItem(id)),
 });
 
 export default connect(mapStateToProps, mapDispatchToState)(EditItemPage);
