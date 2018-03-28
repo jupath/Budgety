@@ -1,4 +1,40 @@
+.header {
+  background: $header-bg-color;
+}
+
 .header__content {
+  align-content: center;
+  color: white;
   display: flex;
   justify-content: space-between;
+  line-height: 2.1rem;
+  p {
+    margin-bottom: 0;
+  }
+  a:hover {
+    text-decoration: none;
+  }
+}
+
+.header__logo {
+  color: white;
+  font-family: $font-family-logo;
+  font-size: $logo-font-size;
+}
+
+.header__logout {
+  p {
+    @include media-breakpoint-down(sm) {
+      font-size: $small-font-size;
+    }
+  }
+
+  @include media-breakpoint-down(sm) {
+    line-height: 1;
+  }
+
+  @include media-breakpoint-up(sm) {
+    align-items: center;
+    display: flex;
+  }
 }

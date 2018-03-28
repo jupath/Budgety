@@ -31,8 +31,8 @@ class AddItemPage extends Component {
 
   render() {
     return (
-      <div>
-        <h2>Add new {this.state.itemTypeState}</h2>
+      <div className="container px-lg-7">
+        <h2 className="pt-4">Add new {this.state.itemTypeState}</h2>
         <AddItemForm handleAddItem={this.handleAddItem} itemType={this.state.itemTypeState} />
       </div>
     );

@@ -6,6 +6,18 @@ require('dotenv').config({ path: '.env.dev' });
 
 module.exports = merge(common, {
   devtool: 'cheap-module-eval-source-map',
+  module: {
+    rules: [
+      {
+        test: /\.(pdf|jpg|png|gif|svg|ico)$/,
+        use: [
+          {
+            loader: 'url-loader',
+          },
+        ],
+      },
+    ],
+  },
   plugins: [
     new webpack.DefinePlugin({
       'process.env.FIREBASE_API_KEY': JSON.stringify(process.env.FIREBASE_API_KEY),

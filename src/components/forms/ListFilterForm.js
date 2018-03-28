@@ -3,7 +3,6 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { DateRangePicker } from 'react-dates';
 import PropTypes from 'prop-types';
-import momentPropTypes from 'react-moment-proptypes';
 import { setStartDate, setEndDate, setSortBy } from '../../actions/filters';
 
 class ListFilter extends Component {
@@ -23,9 +22,10 @@ class ListFilter extends Component {
 
   render() {
     return (
-      <div>
+      <div className="list-filter-form my-3">
         <div className="container">
           <select
+            className="list-filter-form__select mr-1 px-2"
             value={this.props.filters.sortBy}
             onChange={this.onSortByChange}
           >

@@ -1,0 +1,21 @@
+html,
+body,
+#root,
+.site {
+  height: 100%;
+}
+
+.site {
+  display: flex;
+  flex-direction: column;
+}
+
+body {
+  background: url('../images/bg.png') repeat;
+  color: $base-font-color;
+  font-size: $base-font-size;
+}
+
+small {
+  font-size: $small-font-size;
+}

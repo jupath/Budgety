@@ -1,0 +1,30 @@
+// Colors
+$base-font-color: #212529;
+$border-color: #cacccd;
+$form-input-color: #565a5c;
+$google-blue: #4285f4;
+$header-bg-color: #2c2e31;
+$list-hover-color: #f8f8f8;
+$very-light-gray: #f2f3f5;
+
+// Font
+$font-family-logo: 'Roboto Slab', serif;
+$font-family-sans-serif: 'Roboto', serif;
+
+// Font sizes
+$small-font-size: 0.9rem;
+$base-font-size: 1.1rem;
+$logo-font-size: 2.4rem;
+
+// Spacers
+$spacer: 1rem;
+$spacers: (
+  0: 0,
+  1: ($spacer * .25),
+  2: ($spacer * .5),
+  3: ($spacer * 0.9),
+  4: ($spacer * 1.5),
+  5: ($spacer * 3),
+  6: ($spacer * 6),
+  7: ($spacer * 15)
+);

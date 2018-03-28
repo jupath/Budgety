@@ -8,12 +8,13 @@ const Total = (props) => {
   const { numOfIncomes, numOfExpenses, total } = props;
   const incomeWord = numOfIncomes === 1 ? 'income' : 'incomes';
   const expenseWord = numOfExpenses === 1 ? 'expense' : 'expenses';
-  const totalFixed = total.toFixed(2);
   const formedTotal = (<NumberFormat
-    value={totalFixed}
+    value={total}
     displayType="text"
     thousandSeparator
     prefix="$"
+    decimalScale={2}
+    fixedDecimalScale
   />);
   const renderedTotal = total >= 0 ? formedTotal : <span className="text-danger">{formedTotal}</span>;
 

@@ -1,3 +1,12 @@
+@import './helpers/fonts';
+@import './helpers/variables';
 @import '../../node_modules/bootstrap/scss/bootstrap.scss';
+@import './layout/general';
+@import './components/forms';
+@import './components/buttons';
 @import './layout/header';
+@import './layout/login';
+@import './layout/budget-summary';
+@import './layout/list-filter-form';
 @import './layout/list';
+@import './layout/footer';

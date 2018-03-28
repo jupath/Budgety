@@ -1,0 +1,28 @@
+input,
+select,
+textarea {
+  color: $form-input-color;
+  font-size: $base-font-size;
+}
+
+.form-control {
+  border-radius: 0;
+}
+
+input:required {
+  box-shadow: none !important;
+  -webkit-box-shadow: none !important;
+}
+
+.list-filter-form__select {
+  border: $border-color 1px solid;
+}
+
+.intput-form {
+  input {
+    height: 52px;
+  }
+  textarea {
+    min-height: 120px;
+  }
+}

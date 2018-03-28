@@ -9,7 +9,7 @@ const BudgetSummary = (props) => {
   const { totalIncomes, totalExpenses } = props;
   const total = totalIncomes - totalExpenses;
   return (
-    <div>
+    <div className="budget-summary pt-4 pb-3">
       <div className="container">
         <Total total={total} />
         <h5><span className="pr-2">Total income:</span>
@@ -18,6 +18,8 @@ const BudgetSummary = (props) => {
             displayType="text"
             thousandSeparator
             prefix="$"
+            decimalScale={2}
+            fixedDecimalScale
           />
         </h5>
         <h5><span className="pr-2">Total expenses:</span>
@@ -26,6 +28,8 @@ const BudgetSummary = (props) => {
             displayType="text"
             thousandSeparator
             prefix="$"
+            decimalScale={2}
+            fixedDecimalScale
           />
         </h5>
       </div>

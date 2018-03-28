@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
+import { Button, Form, FormGroup, Label, Input } from 'reactstrap';
 import { startSignInWithEmailAndPassword } from '../../actions/auth';
 
 class LoginForm extends Component {
@@ -34,22 +35,29 @@ class LoginForm extends Component {
   render() {
     return (
       <div>
-        <form onSubmit={this.handleSignIn}>
-          <input
-            type="text"
-            name="email"
-            placeholder="Email"
-            required="required"
-          />
-          <input
-            type="password"
-            name="password"
-            placeholder="Password"
-            required="required"
-          />
-          { this.state.error && <p>{this.state.error}</p> }
-          <button>Login</button>
-        </form>
+        <Form onSubmit={this.handleSignIn}>
+          <FormGroup>
+            <Label className="sr-only" for="email">Email</Label>
+            <Input
+              type="email"
+              name="email"
+              id="email"
+              placeholder="Email"
+              required="required"
+            />
+          </FormGroup>
+          <FormGroup>
+            <Label className="sr-only" for="password">Password</Label>
+            <Input
+              type="password"
+              name="password"
+              placeholder="Password"
+              required="required"
+            />
+          </FormGroup>
+          { this.state.error && <p className="text-danger">{this.state.error}</p> }
+          <Button color="success">Login</Button>
+        </Form>
       </div>
     );
   }

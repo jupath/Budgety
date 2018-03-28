@@ -1,6 +1,37 @@
-.list__item,
+.listitem__body,
 .list__header {
   align-items: center;
   display: flex;
   justify-content: space-between;
+}
+
+.list__header {
+  background-color: $very-light-gray;
+  border: $border-color 1px solid;
+}
+
+.listitem:last-child {
+  @include media-breakpoint-down(sm) {
+    margin-bottom: .5rem;
+  }
+}
+
+.listitem a {
+  &:hover {
+    text-decoration: none;
+     & .listitem__body {
+       background: $list-hover-color;
+     }
+  }
+}
+
+.listitem__body {
+  background-color: white;
+  border-left: $border-color 1px solid;
+  border-bottom: $border-color 1px solid;
+  border-right: $border-color 1px solid;
+  color: $base-font-color;
+  font-size: $base-font-size;
+  transition: background .3s ease;
+  -webkit-transition: background .3s ease;
 }

@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { SingleDatePicker } from 'react-dates';
 import moment from 'moment';
+import { Button, Form, FormGroup, Label, Input } from 'reactstrap';
 
 class AddItemForm extends Component {
   state = {
@@ -60,23 +61,31 @@ class AddItemForm extends Component {
 
   render() {
     return (
-      <div>
-        {this.state.error && <p>{this.state.error}</p>}
-        <form onSubmit={this.onSumbit}>
-          <input
-            type="text"
-            name="description"
-            placeholder="Description"
-            value={this.state.description}
-            onChange={this.onChangeDescription}
-          />
-          <input
-            type="text"
-            name="amount"
-            placeholder="Amount"
-            value={this.state.amount}
-            onChange={this.onChangeAmount}
-          />
+      <div className="intput-form">
+        {this.state.error && <p className="text-danger">{this.state.error}</p>}
+        <Form onSubmit={this.onSumbit}>
+          <FormGroup>
+            <Label className="sr-only" for="description">Description</Label>
+            <Input
+              type="text"
+              name="description"
+              id="description"
+              placeholder="Description"
+              value={this.state.description}
+              onChange={this.onChangeDescription}
+            />
+          </FormGroup>
+          <FormGroup>
+            <Label className="sr-only" for="amount">Amount</Label>
+            <Input
+              type="text"
+              name="amount"
+              id="amount"
+              placeholder="Amount"
+              value={this.state.amount}
+              onChange={this.onChangeAmount}
+            />
+          </FormGroup>
           <SingleDatePicker
             date={this.state.date}
             onDateChange={date => this.setState({ date })}
@@ -85,13 +94,20 @@ class AddItemForm extends Component {
             numberOfMonths={1}
             isOutsideRange={() => false}
           />
-          <textarea
-            placeholder="Add a note (optional)"
-            value={this.state.note}
-            onChange={this.onChangeNote}
-          />
-          <button>Save</button>
-        </form>
+          <FormGroup>
+            <Label className="sr-only" for="note">Add a note</Label>
+            <Input
+              type="textarea"
+              name="note"
+              id="note"
+              placeholder="Add a note (optional)"
+              className="mt-3"
+              value={this.state.note}
+              onChange={this.onChangeNote}
+            />
+          </FormGroup>
+          <Button className="text-uppercase px-4 py-2" color="success">Save {this.state.itemType}</Button>
+        </Form>
       </div>
     );
   }

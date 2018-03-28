@@ -1,0 +1,51 @@
+.login {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.login__box {
+  background-color: white;
+  border: $border-color 1px solid;
+}
+
+.login__header {
+  background-color: $very-light-gray;
+  border-bottom: $border-color 1px solid;
+}
+
+.login__body {
+  .form-control {
+    height: 40px;
+  }
+  .btn {
+    width: 100%;
+  }
+}
+
+.login__google {
+  background-color: $google-blue;
+  background-image: url('../images/google-favicon.png');
+  background-repeat: no-repeat;
+  background-size: 40px;
+  border: $google-blue 1px solid;
+  font-weight: 500;
+  height: 40px;
+  width: 100%;
+  &:hover {
+    background-color: darken($google-blue, 7%);
+    border: darken($google-blue, 7%) 1px solid;
+  }
+}
+
+.login__separator-container {
+  align-items: center;
+  display: flex;
+}
+
+.login__separator {
+  background-color: $border-color;
+  height: 1px;
+  flex: 1 0 auto;
+}

@@ -18,7 +18,7 @@ export const history = createHistory();
 
 const AppRouter = () => (
   <Router history={history}>
-    <div>
+    <div className="site">
       <Header />
       <Switch>
         <PublicRoute path={routes.LOGIN} component={LoginPage} exact />

@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
+import { Button, Form, FormGroup, Label, Input } from 'reactstrap';
 import { LOGIN } from '../../constants/routes';
 import { startSendPasswordResetEmail } from '../../actions/auth';
 
@@ -34,18 +35,30 @@ class ResetPasswordPage extends Component {
 
   render() {
     return (
-      <div>
-        <form onSubmit={this.handleResetPassword}>
-          <input
-            type="email"
-            name="email"
-            required="required"
-          />
-          {this.state.error && <p>{this.state.error}</p>}
-          {this.state.message && <p>{this.state.message}</p>}
-          <button>Reset password</button>
-          <Link to={LOGIN}>Log in</Link>
-        </form>
+      <div className="login">
+        <div className="login__box mt-6">
+          <div className="login__header pt-3 pb-2 px-4">
+            <h3 className="text-center">Reset password</h3>
+          </div>
+          <div className="login__body pt-4 px-3">
+            <Form onSubmit={this.handleResetPassword}>
+              <FormGroup>
+                <Label className="sr-only" for="email">Email</Label>
+                <Input
+                  type="email"
+                  name="email"
+                  id="email"
+                  placeholder="Enter your email address..."
+                  required="required"
+                />
+              </FormGroup>
+              {this.state.error && <p className="text-danger">{this.state.error}</p>}
+              {this.state.message && <p className="text-success">{this.state.message}</p>}
+              <Button color="success">Reset password</Button>
+              <div className="text-center"><Link to={LOGIN}>or Log in</Link></div>
+            </Form>
+          </div>
+        </div>
       </div>
     );
   }
