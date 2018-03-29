@@ -2,3 +2,4 @@ node_modules/
 public/
 .env.prod
 .env.dev
+.firebaserc
