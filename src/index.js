@@ -6,8 +6,8 @@ import AppRouter from './routers/AppRouter';
 import configureStore from './store/configureStore';
 import { startSetItems } from './actions/budget';
 import { userLogin, userLogout } from './actions/auth';
-import { firebase } from './firebase/firebase';
 import { auth } from './firebase/auth';
+import LoadingPage from './components/pages/LoadingPage';
 import './styles/styles.scss';
 
 const store = configureStore();
@@ -25,6 +25,8 @@ const renderApp = () => {
     hasRendered = true;
   }
 };
+
+ReactDOM.render(<LoadingPage />, document.getElementById('root'));
 
 auth.onAuthStateChanged((user) => {
   if (user) {
