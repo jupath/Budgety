@@ -1,0 +1,145 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render correctly with items 1`] = `
+<div
+  className="budget-summary pt-4 pb-3"
+>
+  <div
+    className="container"
+  >
+    <Connect(Total)
+      total={-100}
+    />
+    <h5>
+      <span
+        className="pr-2"
+      >
+        Total income:
+      </span>
+      <NumberFormat
+        allowEmptyFormatting={false}
+        allowNegative={true}
+        decimalScale={2}
+        decimalSeparator="."
+        displayType="text"
+        fixedDecimalScale={true}
+        getInputRef={[Function]}
+        isAllowed={[Function]}
+        isNumericString={false}
+        onBlur={[Function]}
+        onChange={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        onMouseUp={[Function]}
+        onValueChange={[Function]}
+        prefix="$"
+        suffix=""
+        thousandSeparator={true}
+        type="text"
+        value={200}
+      />
+    </h5>
+    <h5>
+      <span
+        className="pr-2"
+      >
+        Total expenses:
+      </span>
+      <NumberFormat
+        allowEmptyFormatting={false}
+        allowNegative={true}
+        decimalScale={2}
+        decimalSeparator="."
+        displayType="text"
+        fixedDecimalScale={true}
+        getInputRef={[Function]}
+        isAllowed={[Function]}
+        isNumericString={false}
+        onBlur={[Function]}
+        onChange={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        onMouseUp={[Function]}
+        onValueChange={[Function]}
+        prefix="$"
+        suffix=""
+        thousandSeparator={true}
+        type="text"
+        value={300}
+      />
+    </h5>
+  </div>
+</div>
+`;
+
+exports[`should render correctly without items 1`] = `
+<div
+  className="budget-summary pt-4 pb-3"
+>
+  <div
+    className="container"
+  >
+    <Connect(Total)
+      total={0}
+    />
+    <h5>
+      <span
+        className="pr-2"
+      >
+        Total income:
+      </span>
+      <NumberFormat
+        allowEmptyFormatting={false}
+        allowNegative={true}
+        decimalScale={2}
+        decimalSeparator="."
+        displayType="text"
+        fixedDecimalScale={true}
+        getInputRef={[Function]}
+        isAllowed={[Function]}
+        isNumericString={false}
+        onBlur={[Function]}
+        onChange={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        onMouseUp={[Function]}
+        onValueChange={[Function]}
+        prefix="$"
+        suffix=""
+        thousandSeparator={true}
+        type="text"
+        value={0}
+      />
+    </h5>
+    <h5>
+      <span
+        className="pr-2"
+      >
+        Total expenses:
+      </span>
+      <NumberFormat
+        allowEmptyFormatting={false}
+        allowNegative={true}
+        decimalScale={2}
+        decimalSeparator="."
+        displayType="text"
+        fixedDecimalScale={true}
+        getInputRef={[Function]}
+        isAllowed={[Function]}
+        isNumericString={false}
+        onBlur={[Function]}
+        onChange={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        onMouseUp={[Function]}
+        onValueChange={[Function]}
+        prefix="$"
+        suffix=""
+        thousandSeparator={true}
+        type="text"
+        value={0}
+      />
+    </h5>
+  </div>
+</div>
+`;

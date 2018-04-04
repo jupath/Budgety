@@ -1,0 +1,80 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render correctly with logged in user 1`] = `
+<header
+  className="header"
+>
+  <div
+    className="container header__content"
+  >
+    <div
+      className="pt-3 pb-1"
+    >
+      <Link
+        replace={false}
+        to="/"
+      >
+        <p
+          className="header__logo"
+        >
+          Budgety
+        </p>
+      </Link>
+      <p>
+        Keep track of your money
+      </p>
+    </div>
+    <div
+      className="header__logout py-2"
+    >
+      <p
+        className="mr-3 pb-2 pb-sm-0"
+      >
+        Hello,
+        <br
+          className="d-block d-sm-none"
+        />
+         
+        Test Man
+        !
+      </p>
+      <Button
+        className="float-right"
+        color="danger"
+        onClick={[MockFunction]}
+        tag="button"
+      >
+        Log out
+      </Button>
+    </div>
+  </div>
+</header>
+`;
+
+exports[`should render correctly without logged in user 1`] = `
+<header
+  className="header"
+>
+  <div
+    className="container header__content"
+  >
+    <div
+      className="pt-3 pb-1"
+    >
+      <Link
+        replace={false}
+        to="/"
+      >
+        <p
+          className="header__logo"
+        >
+          Budgety
+        </p>
+      </Link>
+      <p>
+        Keep track of your money
+      </p>
+    </div>
+  </div>
+</header>
+`;

@@ -1,0 +1,73 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render Total correctly with default props 1`] = `
+<h4>
+  Viewing 
+  0
+   
+  incomes
+   and 
+  0
+   
+  expenses
+   totalling 
+  <NumberFormat
+    allowEmptyFormatting={false}
+    allowNegative={true}
+    decimalScale={2}
+    decimalSeparator="."
+    displayType="text"
+    fixedDecimalScale={true}
+    getInputRef={[Function]}
+    isAllowed={[Function]}
+    isNumericString={false}
+    onBlur={[Function]}
+    onChange={[Function]}
+    onFocus={[Function]}
+    onKeyDown={[Function]}
+    onMouseUp={[Function]}
+    onValueChange={[Function]}
+    prefix="$"
+    suffix=""
+    thousandSeparator={true}
+    type="text"
+    value={0}
+  />
+</h4>
+`;
+
+exports[`should render Total correctly with props 1`] = `
+<h4>
+  Viewing 
+  2
+   
+  incomes
+   and 
+  3
+   
+  expenses
+   totalling 
+  <NumberFormat
+    allowEmptyFormatting={false}
+    allowNegative={true}
+    decimalScale={2}
+    decimalSeparator="."
+    displayType="text"
+    fixedDecimalScale={true}
+    getInputRef={[Function]}
+    isAllowed={[Function]}
+    isNumericString={false}
+    onBlur={[Function]}
+    onChange={[Function]}
+    onFocus={[Function]}
+    onKeyDown={[Function]}
+    onMouseUp={[Function]}
+    onValueChange={[Function]}
+    prefix="$"
+    suffix=""
+    thousandSeparator={true}
+    type="text"
+    value={100}
+  />
+</h4>
+`;

@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render BudgetList correctly 1`] = `
+<div
+  className="list__header py-3 px-2"
+>
+  <div>
+    <h4
+      className="mb-0"
+    >
+      Expenses
+    </h4>
+  </div>
+  <div>
+    <Link
+      className="btn btn-info"
+      replace={false}
+      to="/add/expense"
+    >
+      Add new 
+      expense
+    </Link>
+  </div>
+</div>
+`;

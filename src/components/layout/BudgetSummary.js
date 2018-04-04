@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 import summarySelector from '../../selectors/summary';
 import Total from './Total';
 
-const BudgetSummary = (props) => {
+export const BudgetSummary = (props) => {
   const { totalIncomes, totalExpenses } = props;
   const total = totalIncomes - totalExpenses;
   return (

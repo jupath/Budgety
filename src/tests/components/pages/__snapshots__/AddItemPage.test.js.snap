@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render AddItemPage correctly 1`] = `
+<div
+  className="container px-lg-7"
+>
+  <h2
+    className="pt-4"
+  >
+    Add new 
+    income
+  </h2>
+  <AddItemForm
+    handleAddItem={[Function]}
+    item={Object {}}
+    itemType="income"
+  />
+</div>
+`;

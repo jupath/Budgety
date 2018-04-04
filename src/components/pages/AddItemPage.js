@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import { startAddItem } from '../../actions/budget';
 import AddItemForm from '../forms/AddItemForm';
 
-class AddItemPage extends Component {
+export class AddItemPage extends Component {
   state = {
     itemTypeState: undefined,
   };

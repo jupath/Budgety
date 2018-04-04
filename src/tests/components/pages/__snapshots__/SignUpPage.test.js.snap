@@ -1,0 +1,240 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render SingUpPage correctly 1`] = `
+<div
+  className="login"
+>
+  <div
+    className="login__box mt-6"
+  >
+    <div
+      className="login__header pt-3 pb-2 px-4"
+    >
+      <h3
+        className="text-center"
+      >
+        Sign up
+      </h3>
+      <p
+        className="mb-0"
+      >
+        and start keeping track of your money
+      </p>
+    </div>
+    <div
+      className="login__body pt-4 px-3"
+    >
+      <Form
+        onSubmit={[Function]}
+        tag="form"
+      >
+        <FormGroup
+          tag="div"
+        >
+          <Label
+            className="sr-only"
+            for="email"
+            tag="label"
+            widths={
+              Array [
+                "xs",
+                "sm",
+                "md",
+                "lg",
+                "xl",
+              ]
+            }
+          >
+            Email
+          </Label>
+          <Input
+            id="email"
+            name="email"
+            onChange={[Function]}
+            placeholder="Email"
+            required="required"
+            type="email"
+          />
+        </FormGroup>
+        <FormGroup
+          tag="div"
+        >
+          <Label
+            className="sr-only"
+            for="password1"
+            tag="label"
+            widths={
+              Array [
+                "xs",
+                "sm",
+                "md",
+                "lg",
+                "xl",
+              ]
+            }
+          >
+            Password 1
+          </Label>
+          <Input
+            id="password1"
+            name="password1"
+            onChange={[Function]}
+            placeholder="Password"
+            required="required"
+            type="password"
+          />
+        </FormGroup>
+        <FormGroup
+          tag="div"
+        >
+          <Input
+            id="password2"
+            name="password2"
+            onChange={[Function]}
+            placeholder="Password again"
+            required="required"
+            type="password"
+          />
+        </FormGroup>
+        <Button
+          color="success"
+          tag="button"
+        >
+          Sign up
+        </Button>
+      </Form>
+      <p>
+        Already have an account? 
+        <Link
+          replace={false}
+          to="/"
+        >
+          Log in
+        </Link>
+      </p>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`should render SingUpPage correctly if there is an auth error 1`] = `
+<div
+  className="login"
+>
+  <div
+    className="login__box mt-6"
+  >
+    <div
+      className="login__header pt-3 pb-2 px-4"
+    >
+      <h3
+        className="text-center"
+      >
+        Sign up
+      </h3>
+      <p
+        className="mb-0"
+      >
+        and start keeping track of your money
+      </p>
+    </div>
+    <div
+      className="login__body pt-4 px-3"
+    >
+      <Form
+        onSubmit={[Function]}
+        tag="form"
+      >
+        <FormGroup
+          tag="div"
+        >
+          <Label
+            className="sr-only"
+            for="email"
+            tag="label"
+            widths={
+              Array [
+                "xs",
+                "sm",
+                "md",
+                "lg",
+                "xl",
+              ]
+            }
+          >
+            Email
+          </Label>
+          <Input
+            id="email"
+            name="email"
+            onChange={[Function]}
+            placeholder="Email"
+            required="required"
+            type="email"
+          />
+        </FormGroup>
+        <FormGroup
+          tag="div"
+        >
+          <Label
+            className="sr-only"
+            for="password1"
+            tag="label"
+            widths={
+              Array [
+                "xs",
+                "sm",
+                "md",
+                "lg",
+                "xl",
+              ]
+            }
+          >
+            Password 1
+          </Label>
+          <Input
+            id="password1"
+            name="password1"
+            onChange={[Function]}
+            placeholder="Password"
+            required="required"
+            type="password"
+          />
+        </FormGroup>
+        <FormGroup
+          tag="div"
+        >
+          <Input
+            id="password2"
+            name="password2"
+            onChange={[Function]}
+            placeholder="Password again"
+            required="required"
+            type="password"
+          />
+        </FormGroup>
+        <p
+          className="text-danger"
+        >
+          Auth error
+        </p>
+        <Button
+          color="success"
+          tag="button"
+        >
+          Sign up
+        </Button>
+      </Form>
+      <p>
+        Already have an account? 
+        <Link
+          replace={false}
+          to="/"
+        >
+          Log in
+        </Link>
+      </p>
+    </div>
+  </div>
+</div>
+`;

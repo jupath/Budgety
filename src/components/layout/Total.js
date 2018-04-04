@@ -4,7 +4,7 @@ import NumberFormat from 'react-number-format';
 import PropTypes from 'prop-types';
 import itemsSelector from '../../selectors/items';
 
-const Total = (props) => {
+export const Total = (props) => {
   const { numOfIncomes, numOfExpenses, total } = props;
   const incomeWord = numOfIncomes === 1 ? 'income' : 'incomes';
   const expenseWord = numOfExpenses === 1 ? 'expense' : 'expenses';

@@ -1,0 +1,99 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render DashboardPage correctly if there are items 1`] = `
+<div>
+  <Connect(BudgetSummary) />
+  <Connect(ListFilter) />
+  <div
+    className="container"
+  >
+    <div
+      className="row"
+    >
+      <div
+        className="col-sm-6"
+      >
+        <ListHeader
+          itemsType="expense"
+          listName="Expenses"
+        />
+        <BudgetList
+          items={
+            Array [
+              Object {
+                "amount": 3100,
+                "date": 0,
+                "description": "Test description 1",
+                "id": "abc123",
+                "itemType": "expense",
+                "note": "",
+              },
+              Object {
+                "amount": 2000,
+                "date": 345600000,
+                "description": "Test description 3",
+                "id": "def345",
+                "itemType": "expense",
+                "note": "Dine out",
+              },
+            ]
+          }
+        />
+      </div>
+      <div
+        className="col-sm-6"
+      >
+        <ListHeader
+          itemsType="income"
+          listName="Incomes"
+        />
+        <BudgetList
+          items={
+            Array [
+              Object {
+                "amount": 5000.52,
+                "date": -345600000,
+                "description": "Test description 2",
+                "id": "bcd234",
+                "itemType": "income",
+                "note": "Salery",
+              },
+            ]
+          }
+        />
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`should render DashboardPage correctly if there are no items 1`] = `
+<div>
+  <Connect(BudgetSummary) />
+  <Connect(ListFilter) />
+  <div
+    className="container"
+  >
+    <div
+      className="row"
+    >
+      <div
+        className="col-sm-6"
+      >
+        <ListHeader
+          itemsType="expense"
+          listName="Expenses"
+        />
+      </div>
+      <div
+        className="col-sm-6"
+      >
+        <ListHeader
+          itemsType="income"
+          listName="Incomes"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+`;

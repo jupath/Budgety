@@ -4,10 +4,10 @@ import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import { Button } from 'reactstrap';
 import { startUserLogin } from '../../actions/auth';
-import LoginForm from './LoginForm';
+import LoginForm from '../forms/LoginForm';
 import { SIGNUP, RESET_PASS } from '../../constants/routes';
 
-const LoginPage = ({ loginUser }) => (
+export const LoginPage = ({ loginUser }) => (
   <div className="login__box mt-6">
     <div className="login__header pt-3 pb-2 px-4">
       <h3 className="text-center">Log in to your account</h3>

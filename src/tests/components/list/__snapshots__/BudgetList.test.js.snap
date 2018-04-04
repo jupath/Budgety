@@ -1,0 +1,45 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render BudgetList correctly 1`] = `
+<div>
+  <ListItem
+    key="abc123"
+    listItem={
+      Object {
+        "amount": 3100,
+        "date": 0,
+        "description": "Test description 1",
+        "id": "abc123",
+        "itemType": "expense",
+        "note": "",
+      }
+    }
+  />
+  <ListItem
+    key="bcd234"
+    listItem={
+      Object {
+        "amount": 5000.52,
+        "date": -345600000,
+        "description": "Test description 2",
+        "id": "bcd234",
+        "itemType": "income",
+        "note": "Salery",
+      }
+    }
+  />
+  <ListItem
+    key="def345"
+    listItem={
+      Object {
+        "amount": 2000,
+        "date": 345600000,
+        "description": "Test description 3",
+        "id": "def345",
+        "itemType": "expense",
+        "note": "Dine out",
+      }
+    }
+  />
+</div>
+`;

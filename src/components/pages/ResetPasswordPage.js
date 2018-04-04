@@ -6,30 +6,27 @@ import { Button, Form, FormGroup, Label, Input } from 'reactstrap';
 import { LOGIN } from '../../constants/routes';
 import { startSendPasswordResetEmail } from '../../actions/auth';
 
-class ResetPasswordPage extends Component {
+export class ResetPasswordPage extends Component {
   state = {
-    error: undefined,
-    message: undefined,
+    error: '',
+    message: '',
   }
 
-  doResetPassword = (email) => {
-    this.props.resetPassword(email)
-      .then(() => {
-        if (this.props.authError) {
-          this.setState({ error: this.props.authError });
-        } else if (this.props.authMessage) {
-          this.setState({ error: this.props.authMessage });
-        }
-      });
+  componentWillReceiveProps = (nextProps) => {
+    if (this.state.error !== nextProps.authError) {
+      this.setState({ error: nextProps.authError });
+    }
+
+    if (this.state.message !== nextProps.authMessage) {
+      this.setState({ message: nextProps.authMessage });
+    }
   }
 
   handleResetPassword = (event) => {
     event.preventDefault();
     const email = event.target.elements.email.value;
-    if (email === '') {
-      this.setState({ error: 'Please, fill out the field!' });
-    } else {
-      this.doResetPassword(email);
+    if (email !== '') {
+      this.props.resetPassword(email);
     }
   }
 
@@ -71,8 +68,8 @@ ResetPasswordPage.propTypes = {
 };
 
 ResetPasswordPage.defaultProps = {
-  authError: undefined,
-  authMessage: undefined,
+  authError: '',
+  authMessage: '',
 };
 
 const mapStateToProps = state => ({

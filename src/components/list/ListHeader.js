@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 
-const ListHeader = props => (
+export const ListHeader = props => (
   <div className="list__header py-3 px-2">
     <div>
       <h4 className="mb-0">{props.listName}</h4>

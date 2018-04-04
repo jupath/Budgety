@@ -7,7 +7,7 @@ import ListHeader from '../list/ListHeader';
 import BudgetList from '../list/BudgetList';
 import itemsSelector from '../../selectors/items';
 
-const DashboardPage = props => (
+export const DashboardPage = props => (
   <div>
     <BudgetSummary />
     <ListFilterForm />

@@ -6,13 +6,19 @@ import { Button, Form, FormGroup, Label, Input } from 'reactstrap';
 import { startCreateUserWithEmailAndPass } from '../../actions/auth';
 import { LOGIN } from '../../constants/routes';
 
-class SignUpPage extends Component {
+export class SignUpPage extends Component {
   state = {
     email: '',
     password1: '',
     password2: '',
-    error: undefined,
+    error: '',
   };
+
+  componentWillReceiveProps = (nextProps) => {
+    if (this.state.error !== nextProps.authError) {
+      this.setState({ error: nextProps.authError });
+    }
+  }
 
   onChangeEmail = (event) => {
     const email = event.target.value;
@@ -29,17 +35,6 @@ class SignUpPage extends Component {
     this.setState({ password2 });
   }
 
-  doCreateUser = (email, password) => {
-    this.props.createUser(email, password)
-      .then(() => {
-        if (this.props.authError) {
-          this.setState({ error: this.props.authError });
-        } else {
-          this.setState({ error: undefined });
-        }
-      });
-  }
-
   handleCreateUser = (event) => {
     event.preventDefault();
     const { email, password1, password2 } = this.state;
@@ -48,7 +43,8 @@ class SignUpPage extends Component {
     } else if (password1 !== password2) {
       this.setState({ error: 'The passwords are different!' });
     } else {
-      this.doCreateUser(email, password1);
+      this.setState({ error: '' });
+      this.props.createUser(email, password1);
     }
   }
 
@@ -111,7 +107,7 @@ SignUpPage.propTypes = {
 };
 
 SignUpPage.defaultProps = {
-  authError: undefined,
+  authError: '',
 };
 
 const mapStateToProps = state => ({

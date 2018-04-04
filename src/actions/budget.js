@@ -20,7 +20,7 @@ export const startAddItem = itemData => (dispatch, getState) => {
     itemType, description, amount, date, note,
   };
 
-  database.ref(`users/${userId}/items`)
+  return database.ref(`users/${userId}/items`)
     .push(item)
     .then((ref) => {
       dispatch(addItem({
@@ -39,7 +39,7 @@ export const updateItem = (id, item) => ({
 
 export const startUpdateItem = (id, item) => (dispatch, getState) => {
   const userId = getState().auth.uid;
-  database.ref(`users/${userId}/items/${id}`)
+  return database.ref(`users/${userId}/items/${id}`)
     .update(item)
     .then(() => dispatch(updateItem(id, item)));
 };
@@ -52,7 +52,7 @@ export const deleteItem = id => ({
 
 export const startDeleteItem = id => (dispatch, getState) => {
   const userId = getState().auth.uid;
-  database.ref(`users/${userId}/items/${id}`)
+  return database.ref(`users/${userId}/items/${id}`)
     .remove()
     .then(() => dispatch(deleteItem(id)));
 };

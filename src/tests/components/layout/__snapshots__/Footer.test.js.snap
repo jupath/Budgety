@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render Footer correctly 1`] = `
+<footer
+  className="footer text-center py-4"
+>
+  Created by Attila Taligas, view source on 
+  <Link
+    replace={false}
+    target="_blank"
+    to="https://github.com/jupath/Budgety"
+  >
+    GitHub
+  </Link>
+</footer>
+`;

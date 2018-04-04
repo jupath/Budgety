@@ -11,11 +11,13 @@ export default (state = {}, action) => {
       return {
         ...state,
         error: action.error,
+        authMessage: undefined,
       };
     case 'USER_AUTH_MESSAGE':
       return {
         ...state,
         authMessage: action.authMessage,
+        error: undefined,
       };
     case 'LOGOUT':
       return {};

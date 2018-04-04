@@ -1,0 +1,48 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render ListItem correctly 1`] = `
+<div
+  className="listitem"
+>
+  <Link
+    replace={false}
+    to="/edit/abc123"
+  >
+    <div
+      className="listitem__body py-3 px-2"
+    >
+      <div>
+        Test description 1
+        <br />
+        <small>
+          January 1st, 1970
+        </small>
+      </div>
+      <div>
+        <NumberFormat
+          allowEmptyFormatting={false}
+          allowNegative={true}
+          decimalScale={2}
+          decimalSeparator="."
+          displayType="text"
+          fixedDecimalScale={true}
+          getInputRef={[Function]}
+          isAllowed={[Function]}
+          isNumericString={false}
+          onBlur={[Function]}
+          onChange={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onMouseUp={[Function]}
+          onValueChange={[Function]}
+          prefix="$"
+          suffix=""
+          thousandSeparator={true}
+          type="text"
+          value={3100}
+        />
+      </div>
+    </div>
+  </Link>
+</div>
+`;

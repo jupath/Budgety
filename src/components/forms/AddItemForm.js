@@ -93,6 +93,7 @@ class AddItemForm extends Component {
             onFocusChange={({ focused }) => this.setState({ focused })}
             numberOfMonths={1}
             isOutsideRange={() => false}
+            id="date"
           />
           <FormGroup>
             <Label className="sr-only" for="note">Add a note</Label>

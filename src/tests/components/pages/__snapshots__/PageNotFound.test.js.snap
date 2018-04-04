@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render PageNotFound correctly 1`] = `
+<div
+  className="text-center pt-5"
+>
+  <h2>
+    Ooops, error 404!
+  </h2>
+  <p>
+    Page not found!
+  </p>
+</div>
+`;

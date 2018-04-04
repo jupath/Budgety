@@ -1,0 +1,94 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render EditItemPage correctly 1`] = `
+<div
+  className="container mt-4 px-lg-7"
+>
+  <h2>
+    Update 
+    expense
+  </h2>
+  <AddItemForm
+    handleAddItem={[Function]}
+    item={
+      Object {
+        "amount": 2000,
+        "date": 345600000,
+        "description": "Test description 3",
+        "id": "def345",
+        "itemType": "expense",
+        "note": "Dine out",
+      }
+    }
+    itemType=""
+  />
+  <Button
+    className="mt-2 px-4 py-2 text-uppercase"
+    color="danger"
+    id="toggle-modal"
+    onClick={[Function]}
+    tag="button"
+  >
+    Delete
+  </Button>
+  <Modal
+    autoFocus={true}
+    backdrop={true}
+    backdropTransition={
+      Object {
+        "mountOnEnter": true,
+        "timeout": 150,
+      }
+    }
+    centered={false}
+    fade={true}
+    isOpen={false}
+    keyboard={true}
+    modalTransition={
+      Object {
+        "timeout": 300,
+      }
+    }
+    onClosed={[Function]}
+    onOpened={[Function]}
+    role="dialog"
+    toggle={[Function]}
+    zIndex={1050}
+  >
+    <ModalHeader
+      closeAriaLabel="Close"
+      tag="h5"
+      toggle={[Function]}
+      wrapTag="div"
+    >
+      Delete item
+    </ModalHeader>
+    <ModalBody
+      tag="div"
+    >
+      Are you sure you want to delete this?
+    </ModalBody>
+    <ModalFooter
+      tag="div"
+    >
+      <Button
+        color="danger"
+        id="delete"
+        onClick={[Function]}
+        tag="button"
+      >
+        Delete
+      </Button>
+       
+      <Button
+        color="secondary"
+        id="cancel"
+        onClick={[Function]}
+        tag="button"
+      >
+        Cancel
+      </Button>
+    </ModalFooter>
+  </Modal>
+</div>
+`;
