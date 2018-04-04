@@ -6,7 +6,7 @@ import { Button } from 'reactstrap';
 import { LOGIN } from '../../constants/routes';
 import { startUserLogout } from '../../actions/auth';
 
-export const Header = ({ userLogout, userName }) => (
+export const Header = ({ userLogout, userName, uid }) => (
   <header className="header">
     <div className="container header__content">
       <div className="pt-3 pb-1">
@@ -14,7 +14,7 @@ export const Header = ({ userLogout, userName }) => (
         <p>Keep track of your money</p>
       </div>
       {
-        userName &&
+        uid &&
         <div className="header__logout py-2">
           { userName &&
             <p className="mr-3 pb-2 pb-sm-0">
@@ -31,15 +31,18 @@ export const Header = ({ userLogout, userName }) => (
 Header.propTypes = {
   userLogout: PropTypes.func,
   userName: PropTypes.string,
+  uid: PropTypes.string,
 };
 
 Header.defaultProps = {
   userName: undefined,
   userLogout: undefined,
+  uid: undefined,
 };
 
 const mapStateToProps = state => ({
   userName: state.auth.name,
+  uid: state.auth.uid,
 });
 
 const mapDispatchToProps = dispatch => ({
